@@ -16,7 +16,7 @@ module MessageViewer
     private
 
     def self.load_formatters
-      ::Gem.find_files('textviewer-*.rb').each { |formatter| require formatter }
+      ::Gem.find_files('formatters/*_formatter.rb').each { |formatter| require formatter }
     end
   end
 end
